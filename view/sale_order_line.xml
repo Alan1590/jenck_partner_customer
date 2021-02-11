@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+			<record id="view_sale_order_line_search2_jenck" model="ir.ui.view">    
+				<field name="name">sale.order.line</field>    
+				<field name="model">sale.order.line</field>  
+				<field name="type">search</field>  
+				<field name="inherit_id" ref="sales_processing.view_sale_order_line_search"/>
+			        <field name="arch" type="xml">
+			        <filter string="Product Category" position="after">
+					    <filter string="Rubro Empresa" domain="[]" context="{'group_by':'jenck_partner_rubro'}"/>
+                	</filter>
+			        </field>
+			</record>
+	</data>
+</openerp>
